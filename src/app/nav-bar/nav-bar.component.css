@@ -1,0 +1,56 @@
+header {
+  height: 100px;
+  background-color: #002854;
+  position: relative;
+}
+
+.nav-items-wrapper {
+  display: inline-block;
+  width: 33.33%;
+  height: 100px;
+}
+
+#logo-wrapper {
+  float: left;
+}
+
+#logo-wrapper img {
+  height: 160px;
+  width: 160px;
+  margin-left: 25%;
+}
+
+.search-box {
+  background-color: white;
+  position: absolute;
+  top: 10px;
+  left: calc(50% - 180px);
+  width: 360px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#search-input {
+  box-sizing: border-box;
+  height: 40px;
+  width: 310px;
+  padding: 10px;
+  border: none;
+}
+
+#search-wrapper img {
+  height: 32px;
+  width: 32px;
+  position: relative;
+  top: 10px;
+  cursor: pointer;
+}
+
+#shopping-cart-wrapper img {
+  position: absolute;
+  right: 100px;
+  top: 25px;
+  height: 48px;
+  width: 48px;
+  cursor: pointer;
+}

@@ -1,0 +1,18 @@
+<header>
+    <nav>
+        <div class="nav-items-wrapper" id="logo-wrapper">
+            <img src="../../assets/img/logo.png" alt="Logo">
+        </div>
+        <div class="nav-items-wrapper" id="search-wrapper">
+            <div class="search-box">
+                <input #search type="text" id="search-input" placeholder="Search items">
+                <img (click)="focusSearch()" src="../../assets/img/search-blue.svg" alt="Search icon">
+            </div>
+        </div>
+        <div class="nav-items-wrapper" id="shopping-cart-wrapper">
+                <a [routerLink]="[ '/cart']">
+                    <img src="../../assets/img/shopping-cart.svg" alt="shopping cart icon">
+                </a>
+        </div>
+    </nav>
+</header>

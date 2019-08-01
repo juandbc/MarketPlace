@@ -1,1 +1,12 @@
-<p>filter works!</p>
+<section id="filter-header-wrapper">
+  <h2 id="filter-header">Categories</h2>
+  <img id="filter-icon" src="../../assets/img/filter-results-button.svg">
+</section>
+<section id="categories-wrapper">
+  <ul *ngFor="let category of categories">
+    <li class="categories-item" (click)="filterBy(category.id)">
+        <input type="checkbox" name="" id="category.id">
+        <label for="category.id">{{ category.name }}</label>
+    </li>
+  </ul>
+</section>

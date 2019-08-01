@@ -1,0 +1,31 @@
+aside {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  height: 100%;
+}
+
+#product-list-wrapper {
+  height: 100%;
+  padding-left: 40px;
+  overflow: hidden;
+}
+
+.item-wrapper {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+
+.item-img-wrapper {
+  position: relative;
+}
+
+.item-wrapper p {
+    margin-top: 10px;
+}
+
+.item-name, .item-price {
+    font-weight: bold;
+}

@@ -1,0 +1,31 @@
+#filter-header-wrapper * {
+    display: inline-block;
+    vertical-align: middle;
+    height: 40px;
+}
+
+#filter-header {
+    font-weight: bold;
+    font-size: 2em;
+    color: #002854;
+}
+
+#filter-icon {
+    margin-left: 10px;
+    width: 32px;
+    height: 32px;
+}
+
+#categories-wrapper {
+    margin-top: 20px;
+}
+
+.categories-item {
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+
+.categories-item label {
+    margin-left: 10px;
+    cursor: pointer;
+}

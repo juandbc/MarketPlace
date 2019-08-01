@@ -8,6 +8,8 @@ import { CartComponent } from './cart/cart.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductComponent } from './product/product.component';
 import { FilterComponent } from './filter/filter.component';
+import { HttpClientModule } from '@angular/common/http';
+import { TruncStringPipe } from './util/pipes/trunc-string.pipe';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { FilterComponent } from './filter/filter.component';
     CartComponent,
     ProductListComponent,
     ProductComponent,
-    FilterComponent
+    FilterComponent,
+    TruncStringPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

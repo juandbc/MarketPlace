@@ -1,1 +1,17 @@
-<p>product-list works!</p>
+<aside>
+  <app-filter></app-filter>
+</aside>
+<section id="product-list-wrapper">
+  <div class="item-wrapper" *ngFor="let product of products">
+    <div class="item-img-wrapper">
+      <img src="{{ product.picture }}" alt="{{ product.name }}" />
+      <a class="add-to-cart-anchor">Add to cart</a>
+    </div>  
+    <p class="item-name">{{ product.name }}</p>
+    <p class="item-desc" *ngIf="product.description.length < 20; else elseBlock">{{ product.description }}</p>
+    <ng-template #elseBlock>
+      <p class="item-desc">{{ product.description | truncString: 20 }}</p>
+    </ng-template>
+    <p class="item-price">{{ product.price | currency }}</p>
+  </div>
+</section>

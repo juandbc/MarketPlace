@@ -17,7 +17,8 @@ export class CartService {
   products: any[];
   httpOptions = {
     headers: new HttpHeaders({
-      'Content-Type': 'application/json'})
+      'Content-Type': 'application/json'
+    })
   };
 
   constructor(private http: HttpClient) { }
@@ -29,7 +30,8 @@ export class CartService {
     );
   }
 
-  async addToCart(cartId: string, productId: string, quantity: number = 1): Promise<object> {
+  async addToCart(cartId: string, productId: string, quantity: number = 1): Promise<any> {
+    // TODO: update the quantity if add a cart that is already added
     const response = { success: false, cartId: '' };
 
     const cart = {
@@ -39,17 +41,14 @@ export class CartService {
     };
 
     if (!cartId) {
-      const cartStored = await this.http.post(CartService.urlApi, cart, this.httpOptions).toPromise()
-      // .subscribe(cartStored => {
+      const cartStored = await this.http.post(CartService.urlApi, cart, this.httpOptions).toPromise<any>();
       if (cartStored) {
         response.success = true;
         response.cartId = cartStored._id;
-        // return response;
       }
-      // });
     } else {
       const url = `${CartService.urlApi}/${cartId}`;
-      const cartStored = await this.http.put(url, cart, this.httpOptions).toPromise();
+      const cartStored = await this.http.put(url, cart, this.httpOptions).toPromise<any>();
       if (cartStored) {
         response.success = true;
         response.cartId = cartStored._id;
@@ -59,30 +58,30 @@ export class CartService {
     return response;
   }
 
-  // // TODO:
-  // removeProduct(cartId: string, productId: string): boolean {
-  //   let sucess = false;
+  // TODO:
+  removeProduct(cartId: string, productId: string): boolean {
+    let sucess = false;
 
-  //   this.products = this.products.filter((p) => {
-  //     return p.productId !== productId;
-  //   });
-  //   return sucess;
-  // }
+    this.products = this.products.filter((p) => {
+      return p.productId !== productId;
+    });
+    return sucess;
+  }
 
-  // // TODO: update qty
-  // updateQuantity(cartId: string, productId: string, qty): boolean {
-  //   let sucess = false;
-  //   const cart = {
-  //     cartId,
-  //     productId,
-  //     qty
-  //   };
+  // TODO: update qty
+  updateQuantity(cartId: string, productId: string, qty): boolean {
+    let sucess = false;
+    const cart = {
+      cartId,
+      productId,
+      qty
+    };
 
-  //   this.http.put(CartService.urlApi, cart, this.httpOptions).subscribe(productUpdated => {
-  //     if (productUpdated) {
-  //       sucess = true;
-  //     }
-  //   });
-  //   return sucess;
-  // }
+    this.http.put(CartService.urlApi, cart, this.httpOptions).subscribe(productUpdated => {
+      if (productUpdated) {
+        sucess = true;
+      }
+    });
+    return sucess;
+  }
 }

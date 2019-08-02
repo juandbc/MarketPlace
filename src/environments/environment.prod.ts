@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  apiHost: 'localhost',
-  apiPort: '3978',
+  apiHost: 'https://marketp-api.azurewebsites.net',
+  apiPort: '80',
   apiBase: 'api'
 };

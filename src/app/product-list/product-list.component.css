@@ -12,10 +12,11 @@ aside {
 }
 
 .item-wrapper {
-    display: inline-block;
-    width: 200px;
-    height: 200px;
-    margin: 10px;
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 300px;
+  margin: 10px;
 }
 
 .item-img-wrapper {
@@ -23,9 +24,38 @@ aside {
 }
 
 .item-wrapper p {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
-.item-name, .item-price {
-    font-weight: bold;
+.item-name,
+.item-price {
+  font-weight: bold;
+}
+
+.item-name a {
+  text-decoration: none;
+  color: #002854;
+}
+
+.item-name a:hover {
+  color: #e49b95;
+}
+
+#add-cart-anchor {
+  width: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  text-align: center;
+  line-height: 200px;
+  color: #002854;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: rgba(228, 156, 149, 0.5);
+  opacity: 0;
+}
+
+#add-cart-anchor:hover {
+  opacity: 1;
 }

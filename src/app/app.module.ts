@@ -6,10 +6,11 @@ import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CartComponent } from './cart/cart.component';
 import { ProductListComponent } from './product-list/product-list.component';
-import { ProductComponent } from './product/product.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { FilterComponent } from './filter/filter.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TruncStringPipe } from './util/pipes/trunc-string.pipe';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -17,9 +18,10 @@ import { TruncStringPipe } from './util/pipes/trunc-string.pipe';
     NavBarComponent,
     CartComponent,
     ProductListComponent,
-    ProductComponent,
+    ProductDetailComponent,
     FilterComponent,
-    TruncStringPipe
+    TruncStringPipe,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,22 @@
-<p>cart works!</p>
+<ng-container *ngIf="cart; else elseTemplate">
+  <section id="cart-content-wrapper">
+    <ul id="products-list">
+      <li *ngFor="let product of cart.products">
+        <span class="product-name-span">{{ product.name }}</span>
+        <span class="right-data-wrapper">
+          <span>
+            <input class="qty-input" type="number" name="" id="quantity" value="{{ product.qty }}"/>
+          </span>
+          <span>{{ product.price }}</span>
+          <button class="remove-button">X</button>
+        </span>
+      </li>
+    </ul>
+  </section>
+</ng-container>
+<ng-template #elseTemplate>
+  <section id="cart-content-wrapper">
+    <img src="../../assets/img/shopping-cart.svg" alt="Shopping cart" />
+    <h1>Your shopping cart is empty</h1>
+  </section>
+</ng-template>

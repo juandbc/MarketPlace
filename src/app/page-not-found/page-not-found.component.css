@@ -1,0 +1,16 @@
+.not-found-wrapper {
+  font-size: 3em;
+  text-align: center;
+}
+
+.not-found-wrapper h1 {
+  font-size: 3em;
+}
+
+.blue {
+  color: #002854;
+}
+
+.pink {
+  color: #e49b95;
+}

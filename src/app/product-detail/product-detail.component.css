@@ -1,0 +1,42 @@
+#item-details-wrapper section{
+    display: inline-block;
+    padding: 0 50px;
+    height: 400px;
+    overflow: hidden;
+}
+
+#data-item-wrapper h1 {
+    font-size: 3em;
+}
+
+#data-item-wrapper p, #quantity-wrapper {
+    margin-top: 30px;
+}
+
+#quantity-input {
+    margin-left: 10px;
+    border-radius: 5px;
+    width: 50px;
+    height: 20px;
+    padding: 5px;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+#add-cart-button {
+    margin-top: 30px;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #002854;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #E49B95;
+    cursor: pointer;
+}

@@ -11,7 +11,7 @@ import { Util } from '../util/util';
 })
 export class FilterService {
 
-  static urlApi = `${environment.apiHost}:${environment.apiPort}/${environment.apiBase}/category`;
+  static urlApi = `${environment.apiHost}:${environment.apiPort}/${environment.apiBase}/categories`;
 
   constructor(private http: HttpClient) { }
 

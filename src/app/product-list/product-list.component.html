@@ -4,10 +4,12 @@
 <section id="product-list-wrapper">
   <div class="item-wrapper" *ngFor="let product of products">
     <div class="item-img-wrapper">
-      <img src="{{ product.picture }}" alt="{{ product.name }}" />
-      <a class="add-to-cart-anchor">Add to cart</a>
-    </div>  
-    <p class="item-name">{{ product.name }}</p>
+      <img src="{{ product.picture }}" alt="{{ product.name }}" />      
+    </div>
+    <a id="add-cart-anchor" (click)="addToCart(product.id)">Add to cart</a>
+    <p class="item-name">
+      <a [routerLink]="['/products', product.id]">{{ product.name }}</a>
+    </p>
     <p class="item-desc" *ngIf="product.description.length < 20; else elseBlock">{{ product.description }}</p>
     <ng-template #elseBlock>
       <p class="item-desc">{{ product.description | truncString: 20 }}</p>

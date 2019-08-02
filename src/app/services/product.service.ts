@@ -11,7 +11,7 @@ import { Util } from '../util/util';
 })
 export class ProductService {
 
-  static urlApi = `${environment.apiHost}:${environment.apiPort}/${environment.apiBase}/product`;
+  static urlApi = `${environment.apiHost}:${environment.apiPort}/${environment.apiBase}/products`;
 
   constructor(private httpClient: HttpClient, ) { }
 
@@ -22,7 +22,7 @@ export class ProductService {
   }
 
   getProduct(productId: string): Observable<Product> {
-    const url = `${ProductService.urlApi}/:${productId}`;
+    const url = `${ProductService.urlApi}/${productId}`;
     return this.httpClient.get<Product>(url).pipe(
       catchError(Util.handleError<Product>('getProduct'))
     );

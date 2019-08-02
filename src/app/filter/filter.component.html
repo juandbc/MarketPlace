@@ -4,9 +4,9 @@
 </section>
 <section id="categories-wrapper">
   <ul *ngFor="let category of categories">
-    <li class="categories-item" (click)="filterBy(category.id)">
-        <input type="checkbox" name="" id="category.id">
-        <label for="category.id">{{ category.name }}</label>
+    <li class="categories-item" (click)="filterBy(category._id)">
+        <input type="checkbox" name="" id="{{category._id}}">
+        <label for="{{category._id}}">{{ category.name }}</label>
     </li>
   </ul>
 </section>
